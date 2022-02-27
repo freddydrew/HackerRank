@@ -1,5 +1,5 @@
 """
-Included here: Days 4 of 30 Days to Code.
+Included here: Day 4 of 30 Days to Code.
 See the Jupyter Notebook for more notes related to this tutorial.
 """
 
