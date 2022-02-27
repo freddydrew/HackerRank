@@ -24,52 +24,52 @@ class Car: #this is how we declare and define classes in python
         self.MaxPeopleInCar = MaxPeopleInCar #Has to be an integer to make any kind of sense
 
         #getters 
-        def getMaxSpeed(self):
-            return self.MaxSpeed
-        def getMinSpeed(self):
-            return self.MinSpeed
-        def getWeight(self):
-            return self.Weight
-        def getIsTheCarOn(self):
-            return self.IsTheCarOn
-        def getCondition(self):
-            return self.Condition
-        def getNameOfCar(self):
-            return self.NameOfCar
-        def getMaxFuel(self):
-            return self.MaxFuel
-        def getCurrentFuel(self):
-            return self.CurrentFuel
-        def getmpg(self):
-            return self.mpg
-        def getNumPeopleInCar(self):
-            return self.NumPeopleInCar
-        def getMaxPeopleInCar(self):
-            return self.MaxPeopleInCar
+    def getMaxSpeed(self):
+        return self.MaxSpeed
+    def getMinSpeed(self):
+        return self.MinSpeed
+    def getWeight(self):
+        return self.Weight
+    def getIsTheCarOn(self):
+        return self.IsTheCarOn
+    def getCondition(self):
+        return self.Condition
+    def getNameOfCar(self):
+        return self.NameOfCar
+    def getMaxFuel(self):
+        return self.MaxFuel
+    def getCurrentFuel(self):
+        return self.CurrentFuel
+    def getmpg(self):
+        return self.mpg
+    def getNumPeopleInCar(self):
+        return self.NumPeopleInCar
+    def getMaxPeopleInCar(self):
+        return self.MaxPeopleInCar
 
-        #setters 
-        def setMaxSpeed(self,MaxSpeed):
-            self.MaxSpeed = MaxSpeed
-        def setMinSpeed(self,MinSpeed):
-            self.MinSpeed = MinSpeed
-        def setWeight(self,Weight):
-            self.Weight = Weight
-        def setIsTheCarOn(self,IsTheCarOn):
-            self.IsTheCarOn = IsTheCarOn
-        def setCondition(self,Condition):
-            self.Condition = Condition
-        def setNameOfCar(self,NameOfCar):
-            self.NameOfCar = NameOfCar
-        def setMaxFuel(self,MaxFuel):
-            self.MaxFuel = MaxFuel
-        def setCurrentFuel(self,CurrentFuel):
-            self.CurrentFuel = CurrentFuel
-        def setmpg(self,mpg):
-            self.mpg = mpg
-        def setNumPeopleInCar(self,NumPeopleInCar):
-            self.NumPeopleInCar = NumPeopleInCar
-        def setMaxPeopleInCar(self,MaxPeopleInCar):
-            self.MaxPeopleInCar = MaxPeopleInCar
+    #setters 
+    def setMaxSpeed(self,MaxSpeed):
+        self.MaxSpeed = MaxSpeed
+    def setMinSpeed(self,MinSpeed):
+        self.MinSpeed = MinSpeed
+    def setWeight(self,Weight):
+        self.Weight = Weight
+    def setIsTheCarOn(self,IsTheCarOn):
+        self.IsTheCarOn = IsTheCarOn
+    def setCondition(self,Condition):
+        self.Condition = Condition
+    def setNameOfCar(self,NameOfCar):
+        self.NameOfCar = NameOfCar
+    def setMaxFuel(self,MaxFuel):
+        self.MaxFuel = MaxFuel
+    def setCurrentFuel(self,CurrentFuel):
+        self.CurrentFuel = CurrentFuel
+    def setmpg(self,mpg):
+        self.mpg = mpg
+    def setNumPeopleInCar(self,NumPeopleInCar):
+        self.NumPeopleInCar = NumPeopleInCar
+    def setMaxPeopleInCar(self,MaxPeopleInCar):
+        self.MaxPeopleInCar = MaxPeopleInCar
 
         #this is an instance method, it accesses and shows the definitions of properties of a specific instance of the class.
         #this method can only be used if an instance of the car class is created to be used on.

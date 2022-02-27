@@ -5,7 +5,6 @@ See the Jupyter Notebook for more notes related to this tutorial.
 
 #practice with while loops
 #While loops, check condition then execute block
-from unicodedata import name
 
 
 def PracticeWhileLoop(x):
