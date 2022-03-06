@@ -41,11 +41,12 @@ class LibraryCatalogue:
 
     #instance methods
     def CheckOut(BookTitle):
-
+        return BookTitle #update
     def ReturnBook(BookTitle):
-    
+        return BookTitle #update
     def BookAlreadyCheckedOut(BookTitle):
+        return BookTitle #update
 
-        
+
 
     
