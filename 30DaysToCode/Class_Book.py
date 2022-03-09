@@ -1,11 +1,12 @@
 """
+Book Class
 Included here: Day 11 of 30 Days to Code.
 See the Jupyter Notebook for more notes related to this tutorial.
 """
 
 class Book:
 
-    def __init__(self, Title = None, PageCount = 0, ISBN = 0, IsCheckedOut = False, DayCheckedOut = None):
+    def __init__(self, Title = None, PageCount = 0, ISBN = 0, IsCheckedOut = False, DayCheckedOut = 0):
         self.Title = Title
         self.PageCount = PageCount
         self.ISBN = ISBN

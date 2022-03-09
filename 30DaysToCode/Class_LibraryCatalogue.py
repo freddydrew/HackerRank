@@ -1,10 +1,11 @@
 """
+Library Catalogue Class
 Included here: Day 11 of 30 Days to Code.
 See the Jupyter Notebook for more notes related to this tutorial.
 """
 #for this to work Class_book needs to be in the same directory as this script
 #import Class_Book as CB
-
+import Class_Book as cb 
 
 class LibraryCatalogue:
 
@@ -40,13 +41,37 @@ class LibraryCatalogue:
         self.CurrentDay = CurrentDay
 
     #instance methods
-    def CheckOut(BookTitle):
-        return BookTitle #update
-    def ReturnBook(BookTitle):
-        return BookTitle #update
-    def BookAlreadyCheckedOut(BookTitle):
-        return BookTitle #update
+    def CheckOut(self,BookTitle):
+        Book = self.BookCollection[BookTitle]
+        if Book.GetIsCheckedOut() == True:
+            self.BookAlreadyCheckedOut(Book)
+        else:
+            Book.SetIsCheckedOut(True,self.CurrentDay)
+            print(f'You just checked out {BookTitle}.',\
+                f'It is due on {self.GetCurrentDay() + self.GetLengthOfCheckoutPeriod()}.')
 
 
+    def ReturnBook(self,BookTitle):
+        Book = self.BookCollection[BookTitle]
+        DaysLate = self.CurrentDay - (Book.GetDayCheckedOut() + self.GetLengthOfCheckoutPeriod())
+        if DaysLate > 0:
+            print(f'You owe the library {self.GetInitialLateFee() + DaysLate*self.GetFeePerLateDay()}',\
+                f'because your books is {DaysLate} days overdue.')
+        else:
+            print('Books is returned, thank you.')
+        Book.SetIsCheckedOut(False,-1)
 
-    
+    def BookAlreadyCheckedOut(self,Book):
+        print(f'Sorry {Book.GetTitle()} is already checked out.',\
+            f'It should be back on day {Book.GetDayCheckedOut()+self.GetLengthOfCheckoutPeriod()}.')
+
+TestBook1 = cb.Book('Life of Freddy',420,696969,False,1)
+TestBook2 = cb.Book('Life of Dalia',69,420420,True,2)
+
+#Testing my methods, I'm a librarian!
+TestLib = LibraryCatalogue(CurrentDay = 10,LengthOfCheckoutPeriod=6,BookCollection={TestBook1.Title:TestBook1,TestBook2.Title:TestBook2})
+TestLib.CheckOut(TestBook1.Title)
+TestLib.CheckOut(TestBook2.Title)
+TestLib.ReturnBook(TestBook2.Title)
+TestLib.ReturnBook(TestBook1.Title)
+print(TestLib.BookCollection)
