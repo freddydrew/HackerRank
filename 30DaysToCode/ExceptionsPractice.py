@@ -11,7 +11,7 @@ See the Jupyter Notebook for more notes related to this tutorial.
 
 #try fails case
 try:
-    0fred = 50
+    fred = FuckClass()
 #a specific error catch must come before the "catch al" except block
 except NameError:
     print('What is this shit even?')
