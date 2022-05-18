@@ -5,7 +5,6 @@ See the Jupyter Notebook for more notes related to this tutorial.
 """
 
 from random import randint
-from tkinter.tix import Tree
 
 class Node:
     def __init__(self,Value=None):
